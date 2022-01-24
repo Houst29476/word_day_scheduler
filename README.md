@@ -35,3 +35,5 @@
 // 2. Create Local storage function for entered events
 // 3. Time (hour) blocks need to change color according to time
 // 4. Create function (save button) that saves entered events
+
+![](assets/images/workday-scheduler.jpg)

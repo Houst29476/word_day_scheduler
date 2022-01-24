@@ -44,7 +44,7 @@ textarea {
 }
 
 .present {
-  background-color: #eb9e9c;
+  background-color: #cae3ff;
   color: white;
 }
 
@@ -58,10 +58,10 @@ textarea {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #83dcf0;
-  color: rgb(43, 42, 42);
+  color: rgb(68, 67, 67);
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  transition: scale(1.5);
 }
