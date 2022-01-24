@@ -58,3 +58,48 @@ if (getLocal) {
     };
 }
 
+// ---------- Time blocks and save buttons -------------- //
+for (let hour = 9; hour < 18; hour++) {
+
+    
+    // -------- For Loop to start data-time at 9a to 5p ---------- //
+    $(".container").append(`
+        
+        <div class="row time-block" data-time="${hour}">
+        <!-- hours -->
+            <div class="col-sm col-md-2 hour">
+            <p>${moment({hour}).format("h  a")}</p>
+            </div>
+        <!-- schedule -->
+            <div class="col-sm col-md-10 d-flex p-0 description">
+            <div class="input-group">
+                <textarea class="form-control text-area"></textarea>
+                <div class="input-group-append">
+                <button class="saveBtn d-flex justify-content-center align-items-center">
+                    <i class="far fa-save fa-2x save-icon"></i>
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        `);
+}
+
+// ----------- Past, Present, Future Time ------------- // 
+$.each($(".time-block"), function(index, value) {
+    let eventInput = parseInt($(value).attr("data-time"));    
+ 
+    if (eventInput == currentTime) {
+        $(this).find("textarea").addClass("present");
+    } 
+    else if (eventInput < currentTime) {
+        $(this).find("textarea").addClass("past");
+    } 
+    else {
+        $(this).find("textarea").addClass("future");
+    }
+})
+
+$(".time-block").each(function() {
+    $(this).find(".text-area").val(availableTime[$(this).attr("data-time")].value);
+});
