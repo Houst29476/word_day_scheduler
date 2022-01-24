@@ -1,5 +1,4 @@
-# Work Day Scheduler Starter Code
-
+# Work Day Scheduler
 
  Application live URL:  https://houst29476.github.io/workday-scheduler/
 
