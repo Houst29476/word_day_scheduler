@@ -29,11 +29,10 @@
     •	When the page is refreshed:
         -	Saved events persist
 
+Pseudo Code
+- Display Current Time
+- Create Local storage function for entered events
+- Time (hour) blocks need to change color according to time
+- Create function (save button) that saves entered events
 
-// Pseudo Code
-// 1. Display Current Time
-// 2. Create Local storage function for entered events
-// 3. Time (hour) blocks need to change color according to time
-// 4. Create function (save button) that saves entered events
-
-![](assets/images/workday-scheduler.jpg)
+![](images/workday-scheduler.jpg)
