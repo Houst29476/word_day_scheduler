@@ -103,3 +103,16 @@ $.each($(".time-block"), function(index, value) {
 $(".time-block").each(function() {
     $(this).find(".text-area").val(availableTime[$(this).attr("data-time")].value);
 });
+
+// --------- Save value to local storage on click ------------ //
+$(".saveBtn").on("click", function(event){
+    event.preventDefault();
+
+    var timeValue = $(this).closest(".time-block").attr("data-time");
+
+    var textValue = $(this).closest(".time-block").find(".text-area").val();
+    availableTime[timeValue].value = textValue;
+
+    // -------- Save object to local storage ----------- //
+    localStorage.setItem("availableTime", JSON.stringify(availableTime));
+});
